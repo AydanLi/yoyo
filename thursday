@@ -1,0 +1,56 @@
+import java.util.ArrayList;
+/**
+ * Write a description of class Tuesday here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
+public class Tuesday2
+{    
+    private ArrayList<String> exercises;
+
+    /**
+     * Constructor for objects of class ArrayList
+     */
+    public Tuesday2()
+    {
+        // initialise instance variables
+        exercises = new ArrayList<String>();
+        loadExercises();
+    }
+
+     public void loadExercises()
+    {
+        exercises.add("Burpee");
+        exercises.add("Crunch");
+        exercises.add("Back Lunge / Biceps Curl");
+        exercises.add("Jump Squat");
+        exercises.add("Up / Down Planks");
+        exercises.add("Bent Rows to Triceps Kickback");
+        exercises.add("Mountain Climbers");
+        exercises.add("Squat Press");
+        exercises.add("Push ups with Renegade Rows");
+        exercises.add("High Knees");
+    }
+    
+    public void getList()
+    {
+        System.out.println("Here are the Exercises and Counts that you did on Tuesday:"  );
+        // for (int indx = 0; indx < exercises.size(); indx++) 
+            int numRepsPerRnd = 10; 
+            int totalReps = 0;
+            
+
+        for (int indx = exercises.size(); indx > 0; indx--) {
+            int repCount = 0;
+            String exercise = exercises.get(indx-1);
+            repCount = (indx) * numRepsPerRnd;
+            totalReps = totalReps + repCount;
+           System.out.println(exercise + " Number of Reps: " + repCount );
+           
+        }
+        
+        System.out.println("Total Number of Reps: " + totalReps );
+        
+                
+        }
